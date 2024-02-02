@@ -7,20 +7,28 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
 # ignore warning
 import warnings
-warnings.filterwarnings('ignore')
+
+import logging
+from datetime import datetime
+
+# Set up logging configuration
+log_filename = 'results/Adaboost.log'
+logging.basicConfig(filename=log_filename, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 def main():
     # Load data
-    df_preprocessed = pd.read_csv('../data/preprocessed.csv')  
+    df_preprocessed = pd.read_csv('data/preprocessed.csv')  
 
     # Separate Features from Label
     X = df_preprocessed.iloc[:, :-1]
     y = df_preprocessed.iloc[:, -1:]
+    y = y.values.ravel()
     # Define the base decision tree estimator
     base_estimator = DecisionTreeClassifier()
 
     # Define the AdaBoostClassifier with the base_estimator
-    adaboost = AdaBoostClassifier(base_estimator=base_estimator)
+    adaboost = AdaBoostClassifier(estimator=base_estimator)
 
     # Define the parameter grid to search
     param_grid = {
@@ -60,10 +68,17 @@ def main():
    
 
     # Save the plot as an image
-    plt.savefig('../resutls/Adaboost.png')
-    print('Done!')
+    plt.savefig('results/Adaboost.png')
+    # Print the best parameters and corresponding accuracy
+    best_params = grid_search.best_params_
+    best_accuracy = grid_search.best_score_
+
+    logging.info("Best Parameters: %s", best_params)
+    logging.info("Best Accuracy: %s", best_accuracy)
 
 
 if __name__ == "__main__":
-    print('Start!')
-    main()
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        logging.info('Start!')
+        main()

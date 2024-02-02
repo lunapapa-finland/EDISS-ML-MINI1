@@ -1,0 +1,163 @@
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 391, in _process_worker
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/multiprocessing/queues.py", line 122, in get
+ModuleNotFoundError: No module named 'sklearn.tree._classes'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/ediss_data/ediss6/ali/2024/EDISS-ML-MINI1/src/scores.py", line 118, in <module>
+    main()
+  File "/ediss_data/ediss6/ali/2024/EDISS-ML-MINI1/src/scores.py", line 51, in main
+    scores = get_scores(X,y)
+             ^^^^^^^^^^^^^^^
+  File "/ediss_data/ediss6/ali/2024/EDISS-ML-MINI1/src/scores.py", line 110, in get_scores
+    scores[name] = cross_val_score(claasifier, X, y, cv=cv, scoring='accuracy', n_jobs=4)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 562, in cross_val_score
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 211, in wrapper
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 309, in cross_validate
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 65, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 1088, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+joblib.externals.loky.process_executor.BrokenProcessPool: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.
+/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:310: UserWarning: resource_tracker: There appear to be 1 leaked file objects to clean up at shutdown
+y", line 391, in _process_worker
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/multiprocessing/queues.py", line 122, in get
+ModuleNotFoundError: No module named 'sklearn.tree._classes'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 1088, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+joblib.externals.loky.process_executor.BrokenProcessPool: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.
+2024-02-02 14:06:25,047 - ERROR - exception calling callback for <Future at 0x7fea7a0739e0 state=finished raised BrokenProcessPool>
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 391, in _process_worker
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/multiprocessing/queues.py", line 122, in get
+ModuleNotFoundError: No module named 'sklearn.tree._classes'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/_base.py", line 26, in _invoke_callbacks
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 385, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 834, in dispatch_next
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 1088, in __call__
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 901, in dispatch_one_batch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/parallel.py", line 819, in _dispatch
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/_parallel_backends.py", line 556, in apply_async
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/reusable_executor.py", line 176, in submit
+  File "/ediss_data/ediss6/ali/miniconda3/envs/ml_mini1/lib/python3.12/site-packages/joblib/externals/loky/process_executor.py", line 1129, in submit
+joblib.externals.loky.process_executor.BrokenProcessPool: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.
+2024-02-02 14:25:03,195 - INFO - Gaussian Process model is done.
+2024-02-02 14:25:03,545 - INFO - Decision Tree model is done.
+2024-02-02 14:25:03,957 - INFO - Random Forest model is done.
+2024-02-02 14:25:12,852 - INFO - Neural Net model is done.
+2024-02-02 14:25:14,357 - INFO - AdaBoost model is done.
+2024-02-02 14:25:14,493 - INFO - Naive Bayes model is done.
+2024-02-02 14:25:14,924 - INFO - QDA model is done.
+2024-02-02 14:25:17,755 - INFO - GradientBoosting model is done.
+2024-02-02 14:25:18,157 - INFO - SGD model is done.
+2024-02-02 14:25:18,353 - INFO - Perceptron model is done.

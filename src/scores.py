@@ -27,14 +27,21 @@ import matplotlib.pyplot as plt
 # ignore warning
 import warnings
 warnings.filterwarnings('ignore')
+import logging
+from datetime import datetime
+
+# Set up logging configuration
+log_filename = 'results/scores.log'
+logging.basicConfig(filename=log_filename, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def main():
     # Load data
-    df_preprocessed = pd.read_csv('../data/preprocessed.csv')  
+    df_preprocessed = pd.read_csv('data/preprocessed.csv')  
 
     # Separate Features from Label
     X = df_preprocessed.iloc[:, :-1]
     y = df_preprocessed.iloc[:, -1:]
+    y = y.values.ravel()
 
     # Apply MinMaxScaler on numeric features
     min_max_scaler = MinMaxScaler()
@@ -56,7 +63,9 @@ def main():
     ax.set_ylabel('Performance')
 
     # Save the plot as an image
-    plt.savefig('../resutls/performance_comparison.png')
+    plt.savefig('results/performance_comparison.png')
+    
+    
 
 # define a model space using dictionary
 def get_models():
@@ -99,10 +108,11 @@ def get_scores(X,y):
                                  random_state=1)
   for name, claasifier in (get_models().items()):
       scores[name] = cross_val_score(claasifier, X, y, cv=cv, scoring='accuracy', n_jobs=4)
-      print(f'{name} model is done.')
+      logging.info(f'{name} model is done.')
   return scores
 
 
 if __name__ == "__main__":
-    print('Start!')
+
+    logging.info('Start!')
     main()

@@ -1,0 +1,47 @@
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 41188 entries, 0 to 41187
+Data columns (total 21 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   age             41188 non-null  int64  
+ 1   job             41188 non-null  object 
+ 2   marital         41188 non-null  object 
+ 3   education       41188 non-null  object 
+ 4   default         41188 non-null  object 
+ 5   housing         41188 non-null  object 
+ 6   loan            41188 non-null  object 
+ 7   contact         41188 non-null  object 
+ 8   month           41188 non-null  object 
+ 9   day_of_week     41188 non-null  object 
+ 10  duration        41188 non-null  int64  
+ 11  campaign        41188 non-null  int64  
+ 12  pdays           41188 non-null  int64  
+ 13  previous        41188 non-null  int64  
+ 14  poutcome        41188 non-null  object 
+ 15  emp.var.rate    41188 non-null  float64
+ 16  cons.price.idx  41188 non-null  float64
+ 17  cons.conf.idx   41188 non-null  float64
+ 18  euribor3m       41188 non-null  float64
+ 19  nr.employed     41188 non-null  float64
+ 20  y               41188 non-null  object 
+dtypes: float64(5), int64(5), object(11)
+memory usage: 6.6+ MB
+umns: ['education_basic.4y', 'education_high.school', 'education_basic.6y', 'education_basic.9y', 'education_professional.course', 'education_unknown', 'education_university.degree', 'education_illiterate']
+2024-02-02 09:51:06,176 - INFO -  OriginalColumn: default
+2024-02-02 09:51:06,177 - INFO - Encoded Columns: ['default_no', 'default_unknown', 'default_yes']
+2024-02-02 09:51:06,180 - INFO -  OriginalColumn: housing
+2024-02-02 09:51:06,181 - INFO - Encoded Columns: ['housing_no', 'housing_yes', 'housing_unknown']
+2024-02-02 09:51:06,183 - INFO -  OriginalColumn: loan
+2024-02-02 09:51:06,184 - INFO - Encoded Columns: ['loan_no', 'loan_yes', 'loan_unknown']
+2024-02-02 09:51:06,187 - INFO -  OriginalColumn: contact
+2024-02-02 09:51:06,188 - INFO - Encoded Columns: ['contact_telephone', 'contact_cellular']
+2024-02-02 09:51:06,190 - INFO -  OriginalColumn: month
+2024-02-02 09:51:06,191 - INFO - Encoded Columns: ['month_may', 'month_jun', 'month_jul', 'month_aug', 'month_oct', 'month_nov', 'month_dec', 'month_mar', 'month_apr', 'month_sep']
+2024-02-02 09:51:06,194 - INFO -  OriginalColumn: day_of_week
+2024-02-02 09:51:06,195 - INFO - Encoded Columns: ['day_of_week_mon', 'day_of_week_tue', 'day_of_week_wed', 'day_of_week_thu', 'day_of_week_fri']
+2024-02-02 09:51:06,198 - INFO -  OriginalColumn: poutcome
+2024-02-02 09:51:06,199 - INFO - Encoded Columns: ['poutcome_nonexistent', 'poutcome_failure', 'poutcome_success']
+2024-02-02 09:51:06,202 - INFO -  OriginalColumn: y
+2024-02-02 09:51:06,203 - INFO - Encoded Columns: ['y_no', 'y_yes']
+2024-02-02 09:51:06,933 - INFO - features:['pdays', 'previous', 'emp.var.rate', 'cons.price.idx', 'euribor3m', 'nr.employed', 'contact_telephone', 'month_mar', 'month_may', 'month_oct', 'month_sep', 'poutcome_nonexistent', 'poutcome_success']
+2024-02-02 09:51:06,934 - INFO - label: ['y_yes']

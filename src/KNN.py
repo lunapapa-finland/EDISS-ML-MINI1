@@ -10,14 +10,21 @@ from sklearn.model_selection import GridSearchCV
 # ignore warning
 import warnings
 warnings.filterwarnings('ignore')
+import logging
+from datetime import datetime
+
+# Set up logging configuration
+log_filename = 'results/KNN.log'
+logging.basicConfig(filename=log_filename, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def main():
     # Load data
-    df_preprocessed = pd.read_csv('../data/preprocessed.csv')  
+    df_preprocessed = pd.read_csv('data/preprocessed.csv')  
 
     # Separate Features from Label
     X = df_preprocessed.iloc[:, :-1]
     y = df_preprocessed.iloc[:, -1:]
+    y = y.values.ravel()
     # Define the KNeighborsClassifier
     knn = KNeighborsClassifier()
 
@@ -67,12 +74,18 @@ def main():
    
 
     # Save the plot as an image
-    plt.savefig('../resutls/KNN.png')
-    print('Done!')
+    plt.savefig('results/KNN.png')
+    # Print the best parameters and corresponding accuracy
+    best_params = grid_search.best_params_
+    best_accuracy = grid_search.best_score_
+
+    logging.info("Best Parameters: %s", best_params)
+    logging.info("Best Accuracy: %s", best_accuracy)
 
 
 
 
 if __name__ == "__main__":
-    print('Start!')
+   
+    logging.info('Start!')
     main()
