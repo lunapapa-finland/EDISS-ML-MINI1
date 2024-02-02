@@ -56,7 +56,7 @@ def main():
     ax.set_ylabel('Performance')
 
     # Save the plot as an image
-    plt.savefig('performance_comparison.png')
+    plt.savefig('../resutls/performance_comparison.png')
 
 # define a model space using dictionary
 def get_models():
